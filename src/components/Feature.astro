@@ -1,0 +1,45 @@
+---
+import Card from "../components/Card.astro";
+
+const card = [
+  {
+    image: "/messages.svg",
+    title: "Answer questions",
+    description:
+      "Lorem ipsum dolor sit amet consectetur. Adipiscing imperdiet bibendum in in vestibulum. ",
+  },
+  {
+    image: "/sms-tracking.svg",
+    title: "Select a quote",
+    description:
+      "Lorem ipsum dolor sit amet consectetur. Adipiscing imperdiet bibendum in in vestibulum. ",
+  },
+  {
+    image: "/edit-2.svg",
+    title: "Get registered",
+    description:
+      "Lorem ipsum dolor sit amet consectetur. Adipiscing imperdiet bibendum in in vestibulum. ",
+  },
+];
+---
+
+<section class="max-w-[1380px] mx-auto mt-[108px] flex flex-col items-center">
+  <span class="leading-[19.2px]"> Three steps. Three minutes.</span>
+  <h2 class="mt-4 text-[50px] font-semibold leading-[60px]">
+    Everything should be this easy.
+  </h2>
+
+  <div
+    class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 mt-[45px] max-w-[1307px] gap-40"
+  >
+    {
+      card.map((card) => (
+        <Card
+          image={card.image}
+          title={card.title}
+          description={card.description}
+        />
+      ))
+    }
+  </div>
+</section>

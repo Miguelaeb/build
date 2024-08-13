@@ -1,0 +1,42 @@
+---
+const navItems = [
+  { name: "Home", href: "/" },
+  { name: "About Us", href: "/about" },
+  { name: "Agents", href: "/agents" },
+  { name: "Services", href: "/services" },
+  { name: "Listings", href: "/listings" },
+];
+---
+
+<nav
+  class="xl:w-[1380px] bg-[#FAFAFA]/50 backdrop-blur-md py-4 rounded-[70px] fixed top-[34px] left-1/2 transform -translate-x-1/2 z-50"
+>
+  <div class="px-10 flex items-center justify-between">
+    <div>
+      <img src="/Logo.png" alt="Logo" />
+    </div>
+    <div class="flex items-center gap-20">
+      <ul
+        class="xl:flex xl:items-center gap-9 py-[18px] px-[22px] rounded-[40px] bg-[#FEFEFF] border-[#BEBEBE] border"
+      >
+        {
+          navItems.map((item) => (
+            <li>
+              <a href={item.href}>{item.name}</a>
+            </li>
+          ))
+        }
+
+        <img class="cursor-pointer" src="/searchIcon.svg" alt="Search Icon" />
+      </ul>
+
+      <div class="flex gap-[57px] items-center">
+        <a class="leading-[19.2px]" href="/#">Other services</a>
+        <button
+          class="border border-[#BEBEBE] py-[15px] px-[35px] rounded-[40px] bg-[#FEFEFF]"
+          >Contact us</button
+        >
+      </div>
+    </div>
+  </div>
+</nav>

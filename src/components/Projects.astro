@@ -1,0 +1,60 @@
+---
+import ProjectCard from "../components/ProjectCard.astro";
+
+const card = [
+  {
+    image: "/VillaOne.png",
+    title: "Sobha Hearland II Villas",
+    description:
+      "Lorem ipsum dolor sit amet consectetur. Adipiscing imperdiet bibendum. ",
+    rating: "4.83",
+  },
+  {
+    image: "/VillaTwo.png",
+    title: "Sobha Hearland II Villas",
+    description:
+      "Lorem ipsum dolor sit amet consectetur. Adipiscing imperdiet bibendum. ",
+    rating: "4.83",
+  },
+  {
+    image: "/VillaThree.png",
+    title: "Sobha Hearland II Villas",
+    description:
+      "Lorem ipsum dolor sit amet consectetur. Adipiscing imperdiet bibendum. ",
+    rating: "4.83",
+  },
+];
+---
+
+<section class="xl:max-w-[1380px] xl:mx-auto mt-[132px]">
+  <p class="leading-[19.2px]">Best Projects of the Years</p>
+  <div class="mt-4 flex justify-between items-center">
+    <h2 class="text-[50px] font-semibold leading-[60px]">
+      Our recent projects
+    </h2>
+
+    <div class="flex items-center gap-4">
+      <button
+        class="rounded-full w-[45px] h-[45px] flex justify-center items-center"
+        ><img src="/arrow-left.svg" alt="Arrow left" /></button
+      >
+      <button
+        class="bg-black rounded-full w-[45px] h-[45px] flex justify-center items-center"
+        ><img src="/arrow-right.svg" alt="Arrow right" /></button
+      >
+    </div>
+  </div>
+
+  <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 mt-[45px] gap-5">
+    {
+      card.map((card) => (
+        <ProjectCard
+          image={card.image}
+          title={card.title}
+          description={card.description}
+          rating={card.rating}
+        />
+      ))
+    }
+  </div>
+</section>
