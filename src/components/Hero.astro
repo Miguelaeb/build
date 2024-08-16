@@ -1,38 +1,55 @@
 <section
-  class="bg-[url('/backgroundColor.png')] bg-cover bg-no-repeat max-w-[1380px] h-[617px] mx-auto mt-[156px] rounded-[15px]"
+  class="bg-[url('/backgroundColor.png')] bg-cover bg-no-repeat xl:max-w-[1380px] h-[617px] lg:h-[530px] xl:h-[617px] xl:mx-auto mt-[156px] rounded-[15px] relative w-[95%] mx-auto"
 >
-  <div class="flex relative pl-[46px] items-center">
-    <div class="w-[479px] mt-[91px]">
-      <span class="leading-[19.2px]">Welcome to Realstate</span>
+  <div
+    class="flex flex-col lg:flex-row items-center lg:items-start lg:pl-[46px] px-4"
+  >
+    <div
+      class="w-full lg:w-[479px] mt-[45px] lg:mt-[91px] text-center lg:text-left"
+    >
+      <span class="block leading-[19.2px] text-sm xl:text-base"
+        >Welcome to Realstate</span
+      >
       <h1
-        class="text-[67px] font-semibold leading-[80.4px] mb-[24px] mt-[15px]"
+        class="text-[36px] md:text-[50px] xl:text-[67px] font-semibold leading-[40px] lg:leading-[80.4px] mb-[16px] lg:mb-[24px] mt-[15px]"
       >
         Manage Your Property
       </h1>
-      <p class="leading-6">
-        Your will have everything nearby supermarket, buses , station, the
-        carmen neighborhood, etc.
+      <p class="text-sm lg:text-base leading-6">
+        Your will have everything nearby supermarket, buses, station, the carmen
+        neighborhood, etc.
       </p>
 
-      <div class="flex items-center mt-6 relative">
+      <div
+        class="flex flex-col lg:flex-row items-center lg:items-center mt-6 relative"
+      >
         <input
           type="email"
           placeholder="Enter your email"
-          class="px-[25px] py-[18px] border border-gray-300 focus:outline-none rounded-l-[40px] w-[438px] rounded-[40px]"
+          class="px-[15px] py-[12px] border border-gray-300 focus:outline-none rounded-l-[20px] w-full lg:w-[438px] rounded-[20px] mb-4 lg:mb-0"
         />
         <button
-          class="px-[25px] py-[18px] bg-[#1F1F1F] text-[#FEFEFF] font-semibold rounded-[40px] leading-6 absolute right-10"
-          >Get a Quote</button
+          class="px-[15px] py-[12px] bg-[#1F1F1F] text-[#FEFEFF] font-semibold rounded-[40px] leading-6 w-full lg:w-auto lg:absolute lg:right-10"
         >
+          Get a Quote
+        </button>
       </div>
     </div>
 
-    <div>
+    <div
+      class="w-full justify-center lg:justify-end mt-6 lg:mt-0 hidden lg:flex absolute top-0 right-0"
+    >
       <img
-        class="absolute right-0 top-0"
+        class="w-[300px] lg:w-[500px] xl:w-auto"
         src="/heroImage.png"
         alt="Hero image"
       />
+    </div>
+
+    <div
+      class="w-full flex justify-center lg:justify-end mt-6 lg:mt-0 lg:hidden absolute -bottom-16 md:-bottom-20"
+    >
+      <img class="w-[400px]" src="/heroImage2.png" alt="Hero image" />
     </div>
   </div>
 </section>

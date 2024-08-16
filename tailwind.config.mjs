@@ -10,7 +10,7 @@ export default {
 			  },
 
 			  boxShadow: {
-				'inset-white': 'inset 0 0 5px white',
+				'custom-white': '0 0 5px rgba(255, 255, 255, 0.5) inset',
 			  },
 		},
 	},

@@ -9,34 +9,46 @@ const navItems = [
 ---
 
 <nav
-  class="xl:w-[1380px] bg-[#FAFAFA]/50 backdrop-blur-md py-4 rounded-[70px] fixed top-[34px] left-1/2 transform -translate-x-1/2 z-50"
+  class="bg-[#FAFAFA]/50 backdrop-blur-md py-4 rounded-[70px] fixed top-[34px] left-1/2 transform -translate-x-1/2 z-50 w-[95%] xl:max-w-[1380px]"
 >
-  <div class="px-10 flex items-center justify-between">
-    <div>
-      <img src="/Logo.png" alt="Logo" />
-    </div>
-    <div class="flex items-center gap-20">
-      <ul
-        class="xl:flex xl:items-center gap-9 py-[18px] px-[22px] rounded-[40px] bg-[#FEFEFF] border-[#BEBEBE] border"
+  <div class="px-5 sm:px-6 lg:px-10 flex items-center justify-between">
+    <span class="font-bold text-lg lg:text-xl">Build</span>
+
+    <button id="menu-toggle" class="lg:hidden">
+      <img src="/burgerIcon.svg" alt="Burger Icon" />
+    </button>
+    <ul
+      id="menu"
+      class="absolute inset-x-0 top-full left-0 hidden flex-col items-center xl:flex xl:flex-row xl:items-center xl:gap-9 p-5 xl:px-[22px] xl:py-[20px] bg-[#FEFEFF] border-[#BEBEBE] border rounded-[40px] xl:relative xl:border-0"
+    >
+      {
+        navItems.map((item) => (
+          <li key={item.name}>
+            <a href={item.href} class="block py-2 px-4 lg:py-0 lg:px-2">
+              {item.name}
+            </a>
+          </li>
+        ))
+      }
+      <li>
+        <img class="hidden xl:block" src="/searchIcon.svg" alt="Search Icon" />
+      </li>
+    </ul>
+    <div class="hidden lg:flex lg:gap-[57px] items-center">
+      <a class="leading-[19.2px]" href="/#">Other services</a>
+      <button
+        class="border border-[#BEBEBE] py-[15px] px-[35px] rounded-[40px] bg-[#FEFEFF]"
       >
-        {
-          navItems.map((item) => (
-            <li>
-              <a href={item.href}>{item.name}</a>
-            </li>
-          ))
-        }
-
-        <img class="cursor-pointer" src="/searchIcon.svg" alt="Search Icon" />
-      </ul>
-
-      <div class="flex gap-[57px] items-center">
-        <a class="leading-[19.2px]" href="/#">Other services</a>
-        <button
-          class="border border-[#BEBEBE] py-[15px] px-[35px] rounded-[40px] bg-[#FEFEFF]"
-          >Contact us</button
-        >
-      </div>
+        Contact us
+      </button>
     </div>
   </div>
 </nav>
+
+<!-- Optional JavaScript to toggle mobile menu -->
+<script>
+  document.getElementById("menu-toggle").addEventListener("click", () => {
+    const menu = document.getElementById("menu");
+    menu.classList.toggle("hidden");
+  });
+</script>

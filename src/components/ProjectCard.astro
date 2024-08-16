@@ -2,15 +2,11 @@
 const { image, title, description, rating } = Astro.props;
 ---
 
-<div
-  class="overflow-hidden flex flex-col border border-[#BEBEBE] rounded-bl-[14px] rounded-br-[14px]"
->
-  <img
-    src={image}
-    alt={title}
-    class="w-[447px] h-[263px] shadow-[inset0-2px_4px_rgba(0,0,0,0.6)]"
-  />
-  <div class="flex flex-col gap-[22px] py-[22px] pl-6">
+<div class="overflow-hidden flex flex-col rounded-[14px] relative h-[450px]">
+  <img src={image} alt={title} class="w-[447px] h-[263px] absolute" />
+  <div
+    class="flex flex-col gap-[22px] pb-[22px] pt-[45px] pl-6 border border-[#BEBEBE] mt-auto rounded-[14px]"
+  >
     <h2 class="text-[21px] font-semibold leading-[25.2px]">{title}</h2>
     <p class="leading-6 w-[329px]">{description}</p>
     <div class="flex items-center gap-[15px]">

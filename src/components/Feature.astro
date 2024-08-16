@@ -23,14 +23,22 @@ const card = [
 ];
 ---
 
-<section class="max-w-[1380px] mx-auto mt-[108px] flex flex-col items-center">
-  <span class="leading-[19.2px]"> Three steps. Three minutes.</span>
-  <h2 class="mt-4 text-[50px] font-semibold leading-[60px]">
-    Everything should be this easy.
-  </h2>
+<section
+  class="w-[95%] xl:max-w-[1380px] mx-auto mt-[108px] flex flex-col items-center"
+>
+  <div class="flex flex-col items-center">
+    <span class="leading-[19.2px] text-sm md:text-base">
+      Three steps. Three minutes.</span
+    >
+    <h2
+      class="mt-4 text-[32px] lg:text-[36px] xl:text-[50px] font-semibold leading-[60px] text-center lg:text-left"
+    >
+      Everything should be this easy.
+    </h2>
+  </div>
 
   <div
-    class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 mt-[45px] max-w-[1307px] gap-40"
+    class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 mt-[45px] max-w-[1307px] gap-10 lg:gap-40"
   >
     {
       card.map((card) => (
